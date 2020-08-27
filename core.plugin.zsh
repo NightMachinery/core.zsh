@@ -1,10 +1,4 @@
-echo 1 $0
-echo 2 ${0:#$ZSH_ARGZERO}
-echo 3 ${(%):-%N}
-echo 4 $ZERO
-echo 5 $PWD
-
-MYDIR="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
+MYDIR="${${0:#$ZSH_ARGZERO}:-${(%):-%N}}"
 MYDIR="${${(M)MYDIR:#/*}:-$PWD/$MYDIR}"
 function night-source() {
     local dir="${2:-$MYDIR/load}"
