@@ -1,0 +1,11 @@
+#+TITLE: core.zsh
+
+My standard library for zsh. This is still woefully incomplete, as the library needs to be refactored out of my monolithical dotfiles.
+
+* Installation
+
+Use your favorite plugin manager:
+
+#+BEGIN_EXAMPLE
+antibody bundle https://github.com/NightMachinary/core.zsh
+#+END_EXAMPLE
