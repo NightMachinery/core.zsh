@@ -1,5 +1,8 @@
 MYDIR="${${0:#$ZSH_ARGZERO}:-${(%):-%N}}"
 MYDIR="${${(M)MYDIR:#/*}:-$PWD/$MYDIR}"
+if ! test -d "$MYDIR" ; then
+    MYDIR="${MYDIR:h}"
+fi
 function night-source() {
     local dir="${2:-$MYDIR/load}"
     local file="$dir/$1.zsh"
