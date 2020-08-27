@@ -1,3 +1,6 @@
+echo 1 $0
+echo 2 ${0:#$ZSH_ARGZERO}
+echo 3 ${(%):-%N}
 MYDIR="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
 MYDIR="${${(M)MYDIR:#/*}:-$PWD/$MYDIR}"
 function night-source() {
